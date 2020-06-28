@@ -7,7 +7,7 @@ import AddCar from "./components/AddCar";
 //Using ApolloClient to connect with server
 const port = process.env.REACT_APP_PORT || 4000;
 const client = new ApolloClient({
-  uri: `http://localhost:${port}/graphql`
+  uri: `http://localhost/graphql`
 });
 
 function App() {
