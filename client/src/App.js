@@ -5,8 +5,10 @@ import CarList from "./components/CarList";
 import AddCar from "./components/AddCar";
 
 //Using ApolloClient to connect with server
+console.log(process.env.REACT_APP_PORT);
+const port = process.env.REACT_APP_PORT;
 const client = new ApolloClient({
-  uri: `http://localhost:${process.env.REACT_APP_PORT}/graphql`
+  uri: `http://localhost:${port}/graphql`
 });
 
 function App() {
