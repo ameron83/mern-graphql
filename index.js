@@ -2,6 +2,7 @@
 const express = require("express");
 const cors = require('cors');
 const path = require("path");
+require("dotenv").config();
 
 const graphqlHTTP = require("express-graphql");
 
@@ -17,8 +18,7 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, "client", "build")))
 
-//Please change mongoDB connection as maybe I have deleted this db on mlab when you are using it.
-mongoose.connect("mongodb+srv://ameron:ameron@mycluster-sgzns.mongodb.net/ameron?retryWrites=true&w=majority",
+mongoose.connect(process.env.DB,
 { useNewUrlParser: true, useUnifiedTopology: true },
 () => {
   console.log("Connect with DB successfully.");
@@ -41,6 +41,6 @@ app.get("*", (req, res) => {
 });
 
 //When our application starts, it will listen on port 4000
-app.listen(4000, () => {
-  console.log("Server is listening on port 4000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server is listening on port ${process.env.PORT}`);
 });
