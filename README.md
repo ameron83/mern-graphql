@@ -1,2 +1,2 @@
-# mern-graphql
-MERN test app using GraphQL
+# mern-graphql-server
+MERN test app with GraphQL - server
