@@ -41,6 +41,6 @@ app.get("*", (req, res) => {
 });
 
 //When our application starts, it will listen on port 4000
-app.listen(process.env.PORT, () => {
+app.listen(process.env.REACT_APP_PORT, () => {
   console.log(`Server is listening on port ${process.env.PORT}`);
 });
