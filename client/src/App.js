@@ -6,7 +6,7 @@ import AddCar from "./components/AddCar";
 
 //Using ApolloClient to connect with server
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql"
+  uri: `http://localhost:8000/graphql`
 });
 
 function App() {
